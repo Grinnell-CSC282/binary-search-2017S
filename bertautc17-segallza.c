@@ -18,5 +18,21 @@
 int
 search (int val, int *vals, int n)
 {
-  return -1;    // STUB
+  int min = -1;
+  int max = n;
+  int mid = (max - min)/2 + min; 
+  while(min < max)
+  {
+    int cur = vals[mid]; 
+    if(cur < val)
+      min = mid + 1;
+    else if (cur > val)
+      max = mid - 1;
+    else 
+      return mid;
+   
+     mid = (max - min)/2 + min; 
+  }
+
+   return -1;    // STUB
 } // search
