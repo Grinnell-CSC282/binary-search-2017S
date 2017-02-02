@@ -21,7 +21,7 @@ search (int val, int *vals, int n)
   int i=n/2;
   int lower=0;
   int upper=n-1;
-  while (vals[i]!=val && (upper-lower)>=1) {
+  while (vals[i]!=val && (upper-lower)*(upper-lower)>=1) {
     if (vals[i] > val){
       upper=i-1;
       i=(upper+lower)/2;
