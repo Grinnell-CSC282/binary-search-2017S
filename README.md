@@ -1,4 +1,4 @@
-Welcome to the Microgoogazonsoft binary search task
+Welcome to the Microgoogazonsoft **(MicrogoogazonBOOK, Sam!) binary search task
 ===================================================
 
 You will see a `search` procedure described in the file `search.h`.
