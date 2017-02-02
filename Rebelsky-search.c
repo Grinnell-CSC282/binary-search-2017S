@@ -21,7 +21,7 @@ search (int val, int *vals, int n)
   int min = 0;
   int max = n-1;
   int i = (max+min)/2;
-  int cur_val = vals[i]
+  int cur_val = vals[i];
   while(cur_val != val && (max-min) > 1 )
     {
       if(cur_val > val)
