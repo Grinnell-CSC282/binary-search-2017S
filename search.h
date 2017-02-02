@@ -16,4 +16,9 @@
 int
 search (int val, int *vals, int n);
 
+int
+search_Helper (int val, int *vals, int start, int end);
+
+
+
 #endif // __SEARCH_H__
