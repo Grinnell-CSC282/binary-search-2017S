@@ -20,9 +20,9 @@ int
 search (int val, int *vals, int n)
 {
   int i = n/2;
-  int l = 0;
+  int l = -1;
   int h = n;
-  while(i != n && i != l){
+  while(i != h && i != l){
     if(vals[i] == val){
       return i;
     } else if (vals[i] > val){
