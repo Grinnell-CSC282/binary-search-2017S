@@ -38,7 +38,21 @@ main (int argc, char *argv[])
       fprintf (stderr, "Search for 20 failed!\n");
       ++errors;
     }
-
+  if (6 != search (21, vals, 7)) 
+    {
+      fprintf (stderr, "Search for 21 failed!\n");
+      ++errors;
+    }
+   if (0 != search (3, vals, 7)) 
+    {
+      fprintf (stderr, "Search for 3 failed!\n");
+      ++errors;
+    }
+    if (-1 != search (10, vals, 7)) 
+    {
+      fprintf (stderr, "Search for 10 failed!\n");
+      ++errors;
+    }
   // Report on total number of errors.
   if (!errors)
     {
