@@ -25,9 +25,9 @@ search (int val, int *vals, int n)
       int mid = (max - min)/2 + min; 
       int cur = vals[mid];
       
-      if(val <= cur && val >= cur)
+      if(val ==  cur)
         return mid;
-      else if (val >= cur)
+      else if (val > cur)
         min = mid + 1;
       else 
         max = mid - 1;
