@@ -21,7 +21,7 @@ main (int argc, char *argv[])
 {
   int tests = 0;        // A count of tests we've run
   int errors = 0;       // A count of errors in the code
-  int vals[32];         // Values to search
+  int vals[33];         // Values to search
   int i;                // Counter variable
   int size;             // Size of array we are searching
 
