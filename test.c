@@ -26,7 +26,7 @@ main (int argc, char *argv[])
   int size;             // Size of array we are searching
 
   // Initialize the array with even numbers
-  for (i = 0; i < 32; i++)
+  for (i = 0; i <= 32; i++)
     {
       vals[i] = i*2;
     } // for
