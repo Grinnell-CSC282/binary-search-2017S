@@ -21,12 +21,12 @@ main (int argc, char *argv[])
 {
   int tests = 0;        // A count of tests we've run
   int errors = 0;       // A count of errors in the code
-  int vals[33];         // Values to search
+  int vals[32];         // Values to search
   int i;                // Counter variable
   int size;             // Size of array we are searching
 
   // Initialize the array with even numbers
-  for (i = 0; i <= 32; i++)
+  for (i = 0; i < 32; i++)
     {
       vals[i] = i*2;
     } // for
