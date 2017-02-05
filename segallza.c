@@ -18,21 +18,20 @@
 int
 search (int val, int *vals, int n)
 {
-  int i=n/2;
-  int lower=0;
-  int upper=n-1;
-  while (vals[i]!=val && (upper-lower)*(upper-lower)>=1) {
-    if (vals[i] > val){
-      upper=i-1;
-      i=(upper+lower)/2;
+  int min = 0;
+  int max = n - 1;
+  while(min <= max)
+    {
+      int mid = (max - min)/2 + min; 
+      int cur = vals[mid];
+      
+      if(val ==  cur)
+        return mid;
+      else if (val > cur)
+        min = mid + 1;
+      else 
+        max = mid - 1;
     }
-    else {
-      lower=i+1;
-      i=(upper+lower)/2;
-    }
-  }
-  if (vals[i]!=val){
-    return -1;
-  }
-  return i;
+
+  return -1;    // STUB
 } // search
