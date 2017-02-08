@@ -11,6 +11,8 @@
 
 #include "search.h"
 
+
+#include <stdio.h>
 // +--------------------+--------------------------------------------
 // | Exported Functions |
 // +--------------------+
@@ -34,12 +36,12 @@ int
 binary_search(int val, int *vals, int n, int offset)
 {
   int midpoint = n / 2;
-  if (vals[midpoint] == val) {
-    return offset + midpoint;
-  } else if (midpoint == 0) {
+  if (n == 0) {
     return -1;
+  } else if (vals[midpoint] == val) {
+    return offset + midpoint;
   } else if (val > vals[midpoint]) {
-    return binary_search(val, &vals[midpoint], n-midpoint, midpoint);
+    return binary_search(val, &vals[midpoint]+1, n-midpoint-1, offset + midpoint+1);
   } else {
     return binary_search(val, vals, midpoint, offset);
   }
