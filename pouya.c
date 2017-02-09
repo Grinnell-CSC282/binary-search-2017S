@@ -11,7 +11,7 @@ int
 search (int x, int arr[], int n)
 {
   int low = 0;
-  int high= n - 1;
+  int high = n - 1;
   int mid = 0;
   while ((high - low) > 1)
   {
