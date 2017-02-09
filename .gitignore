@@ -35,3 +35,8 @@
 # Other executables
 *.check
 *.test
+
+# Ignore stupid things that some students leave in the repo
+*~
+.DS_Store
+*.tmp
