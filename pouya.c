@@ -10,31 +10,37 @@
 int
 search (int x, int arr[], int n)
 {
-  int low = 0;
-  int high = n - 1;
+  int low = 0;                        // The lower bound
+  int high = n - 1;                   // The higher bound
   int mid = 0;
+  // Check the array until high and low are consecutive integers
   while ((high - low) > 1)
-  {
-    mid = (high + low) / 2;
-    if (arr[mid] <= x)
     {
-      low = mid;
+      mid = (high + low) / 2;
+      // In case x is in the right side of our bound
+      if (arr[mid] <= x)
+        {
+          low = mid;
+        }
+      // In case x is in the left side of our bound
+      else
+        {
+          high = mid - 1;
+        }
     }
-    else
-    {
-      high = mid - 1;
-    }
-  }
+  // Return low if that is the number we are looking for
   if (arr[low] == x)
-  {
-    return low;
-  }
+    {
+      return low;
+    }
+  // Return high if that is the number we are looking for
   else if (arr[high] == x)
-  {
-    return high;
-  }
+    {
+      return high;
+    }
+  // Return -1 if x is not found
   else
-  {
-    return -1;
-  }
+    {
+      return -1;
+    }
 }
