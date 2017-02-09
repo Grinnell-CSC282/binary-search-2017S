@@ -10,6 +10,9 @@
 // +---------+
 
 #include "search.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 // +--------------------+--------------------------------------------
 // | Exported Functions |
@@ -25,8 +28,7 @@ search (int val, int *vals, int n)
     if (vals[i] > val){
       upper=i-1;
       i=(upper+lower)/2;
-    }
-    else {
+    } else {
       lower=i+1;
       i=(upper+lower)/2;
     }
